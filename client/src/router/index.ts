@@ -14,6 +14,19 @@ const router = createRouter({
       name: 'clubs',
       component: () => import('../pages/Clubs/index.vue'),
     },
+
+    {
+      path: '/events',
+      name: 'events',
+      component: () => import('../pages/eventPage.vue')
+    },
+
+    {
+      path: '/clubPro',
+      name: 'clubPro',
+      component: () => import('../pages/clubProfile.vue')
+    },
+
     // {
     //   path: '/about',
     //   name: 'about',

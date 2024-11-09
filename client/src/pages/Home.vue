@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
@@ -8,12 +9,18 @@
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-neutral-content text-center">
     <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+      <h1 class="mb-5 text-5xl font-bold">Welcome</h1>
       <p class="mb-5">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
+        Our App is used to help communities by showing them what type of organizations and clubs are around them. We can see community events,
+        clubs, meetings, and organiztions infos with rating from members and the people to help you find exactly what your looking for.
       </p>
-      <button class="btn btn-primary">Get Started</button>
+
+      <p class="mb-5">
+        Now lets see some clubs around your community!
+      </p>
+      <RouterLink to="/clubPro">
+      <button class="btn btn-primary">See Clubs</button>
+    </RouterLink>
     </div>
   </div>
 </div>

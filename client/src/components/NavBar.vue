@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
-
-
-const isOpen= ref(false);
 
 </script>
 
@@ -30,13 +26,13 @@ const isOpen= ref(false);
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <RouterLink to="/" class="navbar-item"><li><a>Homepage</a></li></RouterLink>
-        <RouterLink to="/clubs" class="navbar-items"><li><a>Portfolio</a></li></RouterLink>
-        <li><a>About</a></li>
+        <RouterLink to="/clubs" class="navbar-items"><li><a>Clubs</a></li></RouterLink>
+        <RouterLink to="/events" class="navbar-items"><li><a>Events</a></li></RouterLink>
       </ul>
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost text-xl">placeholder</a>
+    <a class="btn btn-ghost text-xl font-bold">Club Score</a>
   </div>
   <div class="navbar-end">
     <div class="form-control">
