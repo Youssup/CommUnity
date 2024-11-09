@@ -3,10 +3,10 @@ const router = express.Router();
 const communityController = require('../controllers/communityController');
 
 // Get all communities
-router.get('/', communityController.getAllCommunities);
+router.get('/getAllCommunities', communityController.getAllCommunities);
 
 // Add a new community
-router.post('/', communityController.createCommunity);
+router.post('/createCommunity', communityController.createCommunity);
 
 // Delete a community
 // router.delete('/', communityController.deleteCommunity);

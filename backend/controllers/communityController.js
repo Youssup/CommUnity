@@ -29,4 +29,4 @@ async function createCommunity(req, res) {
 //     res.status(500).json({ error: 'Failed to delete community' });
 //   }
 // }
-module.exports = { getAllCommunities, createCommunity, deleteCommunity};
+module.exports = { getAllCommunities, createCommunity};
