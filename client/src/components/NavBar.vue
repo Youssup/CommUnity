@@ -9,7 +9,7 @@ const isOpen= ref(false);
 
 <template>
 
-<div class="navbar bg-purple-800 rounded-b-lg">
+<div class="navbar bg-purple-800">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">

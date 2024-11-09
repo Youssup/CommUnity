@@ -2,20 +2,30 @@
 </script>
 
 <template>
-    <div class="container min-h-screen">
-      <div class="flex items-center justify-center min-h-screen">
-        <input class="input" name="text" placeholder="Search..." type="search">
-      </div>
+    <div
+  class="hero min-h-screen"
+  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+      <p class="mb-5">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
   </div>
+</div>
 </template>
 
 <style scoped>
 .input {
-  max-width: 190px;
+  min-width: 300px;
   background-color: #f5f5f5;
   color: #242424;
   padding: .15rem .5rem;
-  min-height: 40px;
+  min-height: 60px;
   border-radius: 4px;
   outline: none;
   border: none;
