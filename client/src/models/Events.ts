@@ -3,13 +3,13 @@ export interface Event{
     title: string
     description: string
     date: string
+    Time: string
     adress: {
         street: string
         city: string
         state: string
-        zip: number
+        zip: string
     }
-    Time: string
 
 
 }
