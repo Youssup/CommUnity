@@ -16,6 +16,7 @@ app.use(function (req, res, next) {
 });
 
 const communityRoutes = require("./routes/communityRoutes.js")
+app.use("/api/community", communityRoutes)
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));

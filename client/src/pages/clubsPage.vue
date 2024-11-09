@@ -1,11 +1,13 @@
 <script setup lang="ts">
-
+import card from"../components/ClubCard.vue"
 </script>
 
 <template>
+    
     <div class="container min-h-screen">
-        <h1>Clubs</h1>
+    <card />
     </div>
+
 </template>
 
 <style scoped>
