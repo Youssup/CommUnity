@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import card from"../components/ClubCard.vue"
+import review from "../components/MakeReview.vue"
+
+
 </script>
 
 <template>
     
     <div class="container min-h-screen">
-    <card />
+        <review />
+        <card />
     </div>
 
 </template>
