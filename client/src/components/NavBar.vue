@@ -29,14 +29,14 @@ const isOpen= ref(false);
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <RouterLink to="/" class="navbar-item"><a>Homepage</a></RouterLink>
-        <RouterLink to="/clubs" class="navbar-items"><a>Portfolio</a></RouterLink>
+        <RouterLink to="/" class="navbar-item"><li><a>Homepage</a></li></RouterLink>
+        <RouterLink to="/clubs" class="navbar-items"><li><a>Portfolio</a></li></RouterLink>
         <li><a>About</a></li>
       </ul>
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost text-xl">daisyUI</a>
+    <a class="btn btn-ghost text-xl">placeholder</a>
   </div>
   <div class="navbar-end">
     <div class="form-control">
@@ -56,7 +56,6 @@ const isOpen= ref(false);
         <li>
           <a class="justify-between">
             Profile
-            <span class="badge">New</span>
           </a>
         </li>
         <li><a>Settings</a></li>
@@ -67,6 +66,7 @@ const isOpen= ref(false);
 </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
+
 
 </style>
