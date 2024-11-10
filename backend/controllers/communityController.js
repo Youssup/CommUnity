@@ -1,4 +1,4 @@
-const Community = require('../models/communityModel.js');
+const Community = require('../models/communitymodel.js');
 const mongoose = require('mongoose');
 
 // Get all communities
