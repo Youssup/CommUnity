@@ -32,7 +32,7 @@ import ClubScore from '@/assets/ClubScore.png'
             ><li><a>Homepage</a></li></RouterLink
           >
           <RouterLink to="/clubs" class="navbar-items" @click="exitComms()"
-            ><li><a>Clubs</a></li></RouterLink
+            ><li><a>CommUnities</a></li></RouterLink
           >
           <RouterLink to="/events" class="navbar-items" @click="exitComms()"
             ><li><a>Events</a></li></RouterLink
@@ -43,7 +43,7 @@ import ClubScore from '@/assets/ClubScore.png'
     <div class="navbar-center">
       <img class="w-24" :src="ClubScore" alt="ClubScore" />
       <RouterLink to="/" class="navbar-item" @click="exitComms()">
-      <a class="stuff btn btn-ghost text-yellow-400 text-xl text-white font-bold">Club Score</a>
+      <a class="stuff btn btn-ghost text-yellow-400 text-xl text-white font-bold">CommUnity</a>
     </RouterLink>
     </div>
     <div class="navbar-end">

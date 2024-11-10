@@ -37,7 +37,7 @@ async function setCommunity() {
 <template>
   <div class="">
     <button class="cool btn bg-violet-700 text-white" onclick="my_modal_1.showModal()">
-      Make a Club
+      Make a CommUnity
     </button>
     <dialog id="my_modal_1" class="modal">
       <div class="modal-box">
@@ -49,7 +49,7 @@ async function setCommunity() {
         </header>
         <section class="modal-box-body">
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" v-model="clubName" class="grow" placeholder="Club Name" />
+            <input type="text" v-model="clubName" class="grow" placeholder="Community Name" />
           </label>
           <textarea
             v-model="description"

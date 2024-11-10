@@ -39,7 +39,7 @@ const isOpen = ref(false)
             class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl text-center text-gray-800 dark:text-black font-black leading-10"
           >
             Find your
-            <span class="text-violet-800 dark:text-violet-500">community</span>
+            <span class="text-violet-800 dark:text-violet-500">CommUnity</span>
           </h1>
           <p
             class="mt-5 sm:mt-10 lg:w-10/12 text-gray-600 dark:text-gray-900 font-normal text-center text-xl"
@@ -55,7 +55,7 @@ const isOpen = ref(false)
               type="text"
               name="q"
               class="w-full p-3 rounded-md rounded-r-none border border-2 border-indigo-900 placeholder-current dark:bg-purple-500 text-white dark:border-none"
-              placeholder="club name..."
+              placeholder="CommUnity name..."
             />
             <button
               class="searching inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md"

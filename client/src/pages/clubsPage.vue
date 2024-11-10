@@ -44,7 +44,7 @@ const filteredComms = computed(() => {
           <div></div>
           <input v-model="searchQuery" type="text" name="q"
             class="w-full p-3 rounded-md rounded-r-none border border-2 border-indigo-900 placeholder-current dark:bg-purple-500 text-white dark:border-none"
-            placeholder="club name..." />
+            placeholder="CommUnity name..." />
           <button
             class="searching inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md">
 
