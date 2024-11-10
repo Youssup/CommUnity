@@ -1,51 +1,45 @@
 <script setup lang="ts">
 import MakeReview from './MakeReview.vue';
-defineProps<{
-    name: string;
-    rating: number;
-    location: string;
-    meetingTime: string;
-    contact: string;
-    description: string;
-}>();
+import { refComms } from '@/models/commsData';
+const currentComm=refComms()
 </script>
 
 <template>
   <meta charset="UTF-8">
-    <div class="flex flex-col items-center p-6">
+    <div class="flex flex-col items-center p-6" v-for="profile in currentComm" :key="profile.comms.id">
       <!-- Profile Card -->
       <div class="bg-white rounded-lg shadow-lg p-8 w-full text-center">
         <!-- Profile Image -->
         <img class="w-40 h-40 rounded-full mx-auto mb-6" src="https://via.placeholder.com/200" alt="Profile Image" />
   
         <!-- Community Name and Bio -->
-        <h2 class="text-3xl font-semibold text-gray-800">{{ name }}</h2>
+        <h2 class="text-3xl font-semibold text-gray-800">{{ profile.comms.name }}</h2>
         <div class="text-l">
           <p>
-            <span v-for="star in Math.floor(rating)" :key="star">&#11088;</span>
-            <span v-if="rating % 1 !== 0">&#9734;</span>
+            <span v-for="star in Math.floor(profile.comms.rating)" :key="star">&#11088;</span>
+            <span v-if="profile.comms.rating % 1 !== 0">&#9734;</span>
           </p>
         </div>
   
         <!-- Profile Stats -->
         <div class="flex justify-around mt-6 text-gray-700">
           <div>
-            <p class="text-xl font-semibold">{{ location }}</p>
+            <p class="text-xl font-semibold">{{ profile.comms.address }}</p>
             <p class="text-base text-gray-500">Location</p>
           </div>
           <div>
-            <p class="text-xl font-semibold">{{ meetingTime }}</p>
+            <p class="text-xl font-semibold">{{ profile.comms.meetingTime }}</p>
             <p class="text-base text-gray-500">Times</p>
           </div>
           <div>
-            <p class="text-xl font-semibold">{{ contact }}</p>
+            <p class="text-xl font-semibold">{{ profile.comms.contact }}</p>
             <p class="text-base text-gray-500">Contact Info</p>
           </div>
         </div>
   
         <!-- Profile Description -->
         <p class="mt-8 text-lg text-gray-600 leading-relaxed">
-          {{ description }}
+          {{ profile.comms.description }}
         </p>
   
         <!-- Profile Actions -->

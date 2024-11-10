@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import ClubProf from '@/components/ClubProf.vue';
 import ReviewCard from '@/components/ReviewCard.vue';
+import { refComms } from '@/models/commsData';
+import type { Community } from '@/models/Communities';
+import { ref } from 'vue';
+
+const currentComm=refComms()
+const selectedProfile= ref<Community | null>(null)
 </script>
 
 <template>
     <div class="min-h-screen">
         <ClubProf
-        :rating=5
-        name="Eleet Coders"
-        location="123 Main St, City, NY 12345"
-        meetingTime="Mondays 2-3 PM"
-        contact="123456789"
-        description="Join us we're the most amazing club ever!!!"
-        />
+        :selectedProfile="selectedProfile"/>
 
         <div class = "flex flex-row px-4">
             <ReviewCard 

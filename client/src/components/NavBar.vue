@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-
+import { exitComms } from '@/models/commsData';
 </script>
 
 <template>
@@ -25,9 +25,9 @@ import { RouterLink } from 'vue-router';
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <RouterLink to="/" class="navbar-item"><li><a>Homepage</a></li></RouterLink>
-        <RouterLink to="/clubs" class="navbar-items"><li><a>Clubs</a></li></RouterLink>
-        <RouterLink to="/events" class="navbar-items"><li><a>Events</a></li></RouterLink>
+        <RouterLink to="/" class="navbar-item" @click="exitComms()"><li><a>Homepage</a></li></RouterLink>
+        <RouterLink to="/clubs" class="navbar-items" @click="exitComms()"><li ><a>Clubs</a></li></RouterLink>
+        <RouterLink to="/events" class="navbar-items" @click="exitComms()"><li><a>Events</a></li></RouterLink>
         <RouterLink to="/clubPro" class="navbar-items"><li><a>Profile</a></li></RouterLink>
       </ul>
     </div>

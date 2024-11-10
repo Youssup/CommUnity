@@ -5,7 +5,7 @@ import type { DataListEnvelope } from "./dataEnvelope";
 
 export function getAll(): DataListEnvelope<Community> {
     return{
-        data: data.clubs.flat(),
+        data: data.communities.flat(),
         total: data.total
     }
 }
