@@ -1,0 +1,233 @@
+{
+    "clubs": [
+        [
+            {
+              "id": 1,
+              "name": "Greenwood Community Center",
+              "address": {
+                "street": "1234 Oak Avenue",
+                "city": "Greenwood",
+                "state": "CA",
+                "zip": "94545"
+              },
+              "meetingTime": "Every Saturday at 10:00 AM",
+              "contact": "info@greenwoodcommunity.org",
+              "description": "A place for people in the Greenwood area to gather, learn, and connect. We host weekly events, workshops, and volunteer opportunities.",
+              "rating": 4.5,
+              "reviews": [
+                {
+                  "id": 1,
+                  "comment": "Great community center! Very friendly and welcoming environment.",
+                  "date": "2024-10-01",
+                  "rating": 5
+                },
+                {
+                  "id": 2,
+                  "comment": "The events are interesting, but sometimes they run late.",
+                  "date": "2024-09-15",
+                  "rating": 4
+                },
+                {
+                  "id": 3,
+                  "comment": "Love the atmosphere and the variety of programs offered.",
+                  "date": "2024-08-20",
+                  "rating": 5
+                }
+              ],
+              "events": [
+                {
+                  "id": 1,
+                  "title": "Volunteer Meet-Up",
+                  "description": "Join us for a meeting to discuss upcoming volunteer opportunities at the community center.",
+                  "date": "2024-11-10",
+                  "time": "10:00 AM",
+                  "address": {
+                    "street": "1234 Oak Avenue",
+                    "city": "Greenwood",
+                    "state": "CA",
+                    "zip": "94545"
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "Art Workshop",
+                  "description": "Learn basic drawing and painting techniques in this fun, hands-on art workshop for all ages.",
+                  "date": "2024-11-12",
+                  "time": "2:00 PM",
+                  "address": {
+                    "street": "1234 Oak Avenue",
+                    "city": "Greenwood",
+                    "state": "CA",
+                    "zip": "94545"
+                  }
+                },
+                {
+                  "id": 3,
+                  "title": "Community Potluck",
+                  "description": "Bring a dish and enjoy a meal with your neighbors! A great way to meet new people and share food.",
+                  "date": "2024-11-15",
+                  "time": "6:00 PM",
+                  "address": {
+                    "street": "1234 Oak Avenue",
+                    "city": "Greenwood",
+                    "state": "CA",
+                    "zip": "94545"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Sunrise Community Hub",
+              "address": {
+                "street": "789 Sunrise Blvd",
+                "city": "Sunrise",
+                "state": "FL",
+                "zip": "33101"
+              },
+              "meetingTime": "Every Thursday at 5:00 PM",
+              "contact": "contact@sunrisehub.org",
+              "description": "Sunrise Community Hub is a non-profit organization dedicated to promoting local artists, providing educational workshops, and hosting neighborhood events.",
+              "rating": 4.8,
+              "reviews": [
+                {
+                  "id": 1,
+                  "comment": "Amazing place! The art workshops are very informative and the people are so friendly.",
+                  "date": "2024-09-30",
+                  "rating": 5
+                },
+                {
+                  "id": 2,
+                  "comment": "I love the local art exhibitions. A great way to support emerging artists.",
+                  "date": "2024-08-12",
+                  "rating": 5
+                },
+                {
+                  "id": 3,
+                  "comment": "Great workshops, but could use more variety in topics.",
+                  "date": "2024-07-25",
+                  "rating": 4
+                }
+              ],
+              "events": [
+                {
+                  "id": 1,
+                  "title": "Art Exhibition Opening",
+                  "description": "Join us for the opening night of our new art exhibition featuring local artists from the community.",
+                  "date": "2024-11-05",
+                  "time": "6:00 PM",
+                  "address": {
+                    "street": "789 Sunrise Blvd",
+                    "city": "Sunrise",
+                    "state": "FL",
+                    "zip": "33101"
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "Painting with the Pros",
+                  "description": "A hands-on painting workshop where local artists will guide you through the process of creating your own masterpiece.",
+                  "date": "2024-11-07",
+                  "time": "2:00 PM",
+                  "address": {
+                    "street": "789 Sunrise Blvd",
+                    "city": "Sunrise",
+                    "state": "FL",
+                    "zip": "33101"
+                  }
+                },
+                {
+                  "id": 3,
+                  "title": "Community Yoga Session",
+                  "description": "Join us for a free yoga session to relax and unwind. All skill levels are welcome.",
+                  "date": "2024-11-09",
+                  "time": "9:00 AM",
+                  "address": {
+                    "street": "789 Sunrise Blvd",
+                    "city": "Sunrise",
+                    "state": "FL",
+                    "zip": "33101"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Lakeside Neighborhood Group",
+              "address": {
+                "street": "456 Lakeside Drive",
+                "city": "Lakeside",
+                "state": "TX",
+                "zip": "75001"
+              },
+              "meetingTime": "Every Sunday at 4:00 PM",
+              "contact": "info@lakesidegroup.org",
+              "description": "Lakeside Neighborhood Group brings residents together to promote community improvement, environmental sustainability, and local events.",
+              "rating": 4.2,
+              "reviews": [
+                {
+                  "id": 1,
+                  "comment": "Great community events, though the meetings sometimes run too long.",
+                  "date": "2024-10-05",
+                  "rating": 4
+                },
+                {
+                  "id": 2,
+                  "comment": "Love the sense of belonging here. So many different activities for everyone.",
+                  "date": "2024-09-18",
+                  "rating": 5
+                },
+                {
+                  "id": 3,
+                  "comment": "Good events, but the parking could be better organized.",
+                  "date": "2024-08-30",
+                  "rating": 3
+                }
+              ],
+              "events": [
+                {
+                  "id": 1,
+                  "title": "Neighborhood Cleanup",
+                  "description": "Join us for a community cleanup event to keep Lakeside beautiful. Volunteers are welcome!",
+                  "date": "2024-11-01",
+                  "time": "9:00 AM",
+                  "address": {
+                    "street": "456 Lakeside Drive",
+                    "city": "Lakeside",
+                    "state": "TX",
+                    "zip": "75001"
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "Sustainability Workshop",
+                  "description": "Learn about sustainable practices and how to implement them in your daily life.",
+                  "date": "2024-11-03",
+                  "time": "1:00 PM",
+                  "address": {
+                    "street": "456 Lakeside Drive",
+                    "city": "Lakeside",
+                    "state": "TX",
+                    "zip": "75001"
+                  }
+                },
+                {
+                  "id": 3,
+                  "title": "Lakeside Movie Night",
+                  "description": "Bring a blanket and enjoy a free movie under the stars at our neighborhood park.",
+                  "date": "2024-11-08",
+                  "time": "7:30 PM",
+                  "address": {
+                    "street": "456 Lakeside Drive",
+                    "city": "Lakeside",
+                    "state": "TX",
+                    "zip": "75001"
+                  }
+                }
+              ]
+            }
+          ]
+          
+    ],
+    "total": 3
+}
