@@ -9,12 +9,11 @@ export async function getAll() {
     return rest('community/')
 }
 
-// export function getAll(): DataListEnvelope<Community> {
-//     return{
-//         data: data.communities.flat(),
-//         total: data.total
-//     }
-// }
+export async function createCommunity(newCommunity: Community) {
+    const savedCommunity = await rest('community/', newCommunity, 'POST')
+    console.log('Created Community:', savedCommunity)
+    return savedCommunity
+}
 
 export interface Community {
     id: number
