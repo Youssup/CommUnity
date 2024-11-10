@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const communityController = require('../controllers/communityController');
 
-// Get all communities
-router.get('/getAllCommunities', communityController.getAllCommunities);
+// Route to get all communities
+router.get('/', communityController.getAllCommunities);
 
-// Add a new community
-router.post('/createCommunity', communityController.createCommunity);
+// Route to get a community by ID
+router.get('/:id', communityController.getCommunityById);
 
-// Delete a community
-// router.delete('/', communityController.deleteCommunity);
+// Route to create a new community
+router.post('/', communityController.createCommunity);
 
 module.exports = router;
