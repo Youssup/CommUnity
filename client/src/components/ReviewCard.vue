@@ -1,17 +1,16 @@
 <script setup lang="ts">
 defineProps<{
   rating: number;
-  clubName: string;
-  location: string;
-  time: string;
-  description: string;
+  userName: string;
+  reviewDate: string;
+  comment: string;
 }>();
 </script>
 
 <template>
   <meta charset="UTF-8">
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
-  <div class="card">
+  <div class="review-card">
     <div class="header">
       <div class="rating">{{ rating }}</div>
       <div>
@@ -21,19 +20,18 @@ defineProps<{
             <span v-if="rating % 1 !== 0">&#9734;</span>
           </p>
         </div>
-        <p class="name">{{ clubName }}</p>
+        <p class="user-name">{{ userName }}</p>
+        <p class="review-date">{{ reviewDate }}</p>
       </div>
     </div>
-    <ul class="message">
-      <p><b>Location: </b>{{ location }}</p>
-      <p><b>Time: </b>{{ time }}</p>
-      <p>{{ description }}</p>
-    </ul>
+    <div class="comment">
+      <p>"{{ comment }}"</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.card {
+.review-card {
   margin: 0.5rem;
   background-color: rgba(243, 244, 246, 1);
   padding: 2rem;
@@ -68,19 +66,18 @@ defineProps<{
   color: rgba(34, 197, 94, 1);
 }
 
-.name {
+.user-name,
+.review-date {
   margin-top: 0.25rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
   font-weight: 600;
   color: rgba(55, 65, 81, 1);
 }
 
-.message {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+.comment {
   margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: rgba(107, 114, 128, 1);
 }
 </style>
