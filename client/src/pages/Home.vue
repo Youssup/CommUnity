@@ -88,4 +88,5 @@ const isOpen = ref(false)
 </template>
 
 <style scoped>
+
 </style>
