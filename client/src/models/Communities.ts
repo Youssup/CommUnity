@@ -1,6 +1,14 @@
+import data from '../data/comms.json'
 import type { Event } from "./Events";
 import type { Review } from "./Reviews";
-//import type { DataEnvelope } from "./dataEnvelope";
+import type { DataListEnvelope } from "./dataEnvelope";
+
+export function getAll(): DataListEnvelope<Community> {
+    return{
+        data: data.clubs.flat(),
+        total: data.total
+    }
+}
 
 export interface Community{
     id: number
@@ -9,12 +17,12 @@ export interface Community{
         street: string
         city: string
         state: string
-        zip: number
+        zip: string
     }
     meetingTime: string
-    Contact: string
-    Description: string
-    Rating: number
+    contact: string
+    description: string
+    rating: number
 
     reviews: Review[]
     events: Event[]
