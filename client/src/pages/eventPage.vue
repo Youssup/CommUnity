@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import MakeEvent from '@/components/MakeEvent.vue';
-import EventCard from '@/components/EventCard.vue';
+import MakeEvent from '@/components/MakeEvent.vue'
+import EventCard from '@/components/EventCard.vue'
 </script>
 
 <template>

@@ -30,6 +30,6 @@ export interface Community{
     description: string
     rating: number
 
-    reviews: Review[]
-    events: Event[]
+  reviews: Review[]
+  events: Event[]
 }

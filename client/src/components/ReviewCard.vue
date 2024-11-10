@@ -1,33 +1,35 @@
 <script setup lang="ts">
-import { refComms } from '@/models/commsData';
-const currentComm=refComms()
-
-
+import { refComms } from '@/models/commsData'
+const currentComm = refComms()
 </script>
 
 <template>
-  <meta charset="UTF-8" >
-  <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4" v-for="comm in currentComm" :key="comm.comms.id">
-  <!-- /* From Uiverse.io by Yaya12085 */ edited -->
-  <div class="review-card shadow-lg" v-for="review in comm.comms.reviews" :key="review.id">
-    <div class="header" >
-      <div class="rating">{{ review.rating }}</div>
-      <div>
-        <div class="stars">
-          <p>
-            <span v-for="star in Math.floor(review.rating)" :key="star">&#11088;</span>
-            <span v-if="review.rating % 1 !== 0">&#9734;</span>
-          </p>
+  <meta charset="UTF-8" />
+  <div
+    class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4"
+    v-for="comm in currentComm"
+    :key="comm.comms.id"
+  >
+    <!-- /* From Uiverse.io by Yaya12085 */ edited -->
+    <div class="review-card shadow-lg" v-for="review in comm.comms.reviews" :key="review.id">
+      <div class="header">
+        <div class="rating">{{ review.rating }}</div>
+        <div>
+          <div class="stars">
+            <p>
+              <span v-for="star in Math.floor(review.rating)" :key="star">&#11088;</span>
+              <span v-if="review.rating % 1 !== 0">&#9734;</span>
+            </p>
+          </div>
+          <p class="user-name">Anonymous</p>
+          <p class="review-date">{{ review.date }}</p>
         </div>
-        <p class="user-name">Anonymous</p>
-        <p class="review-date">{{ review.date }}</p>
+      </div>
+      <div class="comment">
+        <p>"{{ review.comment }}"</p>
       </div>
     </div>
-    <div class="comment">
-      <p>"{{ review.comment }}"</p>
-    </div>
   </div>
-</div>
 </template>
 
 <style scoped>

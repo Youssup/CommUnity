@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import type { Community } from '@/models/Communities';
-import { setComms } from '@/models/commsData';
-import { computed } from 'vue';
+import type { Community } from '@/models/Communities'
+import { setComms } from '@/models/commsData'
+import { computed } from 'vue'
 
 const props = defineProps<{
   comms: Community
-}>();
+}>()
 
-const { comms } = props;
+const { comms } = props
 
 const avgRating = computed(() => {
-  let totalRating = 0;
-  let reviewCount = 0;
+  let totalRating = 0
+  let reviewCount = 0
 
-  comms.reviews.forEach(review => {
-    totalRating += review.rating;
-    reviewCount++;
-  });
+  comms.reviews.forEach((review) => {
+    totalRating += review.rating
+    reviewCount++
+  })
 
-  return reviewCount > 0 ? (totalRating / reviewCount).toFixed(1) : 0;
-});
+  return reviewCount > 0 ? (totalRating / reviewCount).toFixed(1) : 0
+})
 </script>
 
 <template>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
   <div class="card">
     <div class="header">
@@ -41,7 +41,10 @@ const avgRating = computed(() => {
       </div>
     </div>
     <ul class="message">
-      <p><b>Location: </b>{{ comms.address.street }}, {{ comms.address.city }}, {{ comms.address.state }}, {{ comms.address.zip }}</p>
+      <p>
+        <b>Location: </b>{{ comms.address.street }}, {{ comms.address.city }},
+        {{ comms.address.state }}, {{ comms.address.zip }}
+      </p>
       <p><b>Time: </b>{{ comms.meetingTime }}</p>
       <p>{{ comms.description }}</p>
     </ul>
