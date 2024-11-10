@@ -3,7 +3,7 @@ export interface Event{
     title: string
     description: string
     date: string
-    Time: string
+    time: string
     adress: {
         street: string
         city: string
