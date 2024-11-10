@@ -7,7 +7,7 @@ import ReviewCard from '@/components/ReviewCard.vue';
     <div class="min-h-screen">
         <ClubProf />
 
-        <div class = "flex flex-row">
+        <div class = "flex flex-row px-4">
             <ReviewCard 
             :rating = 5
             userName = "Anonymous User"
