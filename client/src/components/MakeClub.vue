@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Community } from '@/models/Communities'
+import { createCommunity } from '../models/Communities'
 
 const clubName = ref('')
 const description = ref('')
@@ -11,7 +12,7 @@ const city = ref('')
 const state = ref('')
 const zip = ref('')
 
-function createCommunity() {
+async function setCommunity() {
   const newCommunity: Community = {
     id: Date.now(),
     name: clubName.value,
@@ -29,6 +30,7 @@ function createCommunity() {
     events: [] 
   }
   console.log('Created Community:', newCommunity)
+  await createCommunity(newCommunity)
 }
 </script>
 
@@ -77,7 +79,7 @@ function createCommunity() {
         </section>
         <div class="modal-action">
           <!-- Trigger the createCommunity function on submit -->
-          <button @click="createCommunity" class="btn bg-green-500 text-white">Submit</button>
+          <button @click="setCommunity" class="btn bg-green-500 text-white">Submit</button>
         </div>
       </div>
     </dialog>
