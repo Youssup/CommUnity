@@ -1,5 +1,25 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { computed, ref, watchEffect } from 'vue'
+import { getAll, type Community } from "@/models/Communities";
+
+// Define the search query ref
+const searchQuery = ref('')
+
+const communities = ref<Community[]>([])
+watchEffect(async () => {
+  communities.value = (await getAll()).communities;
+  console.log(communities.value)
+}); 
+
+// Computed property to filter items based on search query
+const filteredComms = computed(() => {
+  const query = searchQuery.value.toLowerCase()
+  return communities.value.filter((comms) =>
+    comms.name.toLowerCase().includes(query)
+  )
+})
+
 </script>
 
 <template>
@@ -49,6 +69,23 @@ import { RouterLink } from 'vue-router'
             </button>
           </div>
         </div>
+        
+        <div class="p-4">
+    <!-- Search Bar -->
+    <input
+      v-model="searchQuery"
+      type="text"
+      placeholder="Search..."
+      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+
+    <!-- Filtered Items -->
+    <ul class="mt-4">
+      <li v-for="comms in filteredComms" :key="comms.id" class="py-1">
+        {{ comms.name }}
+      </li>
+    </ul>
+  </div>
       </div>
     </div>
   </div>
