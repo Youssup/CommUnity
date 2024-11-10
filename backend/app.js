@@ -14,7 +14,9 @@ app.use(function (req, res, next) {
 });
 
 const communityRoutes = require("./routes/communityRoutes.js")
+const reviewRoutes = require("./routes/reviewRoutes.js")
 app.use("/api/community", communityRoutes)
+app.use("/api/review", communityRoutes)
 app.use(express.static('client/dist'))
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
