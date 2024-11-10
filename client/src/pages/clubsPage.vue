@@ -60,7 +60,7 @@ const filteredComms = computed(() => {
         </div>
       </div>
     </div>
-    <MakeClub class="justify-center flex"/>
+    <MakeClub class="justify-center flex mt-5"/>
     <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4">
       <ClubCard v-for="comms in filteredComms" :key="comms.id" :comms="comms" />
     </div>

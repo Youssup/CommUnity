@@ -1,6 +1,35 @@
 <script setup lang="ts">
-// import { ref } from 'vue';
-// const isOpen = ref(false)
+import { ref } from 'vue'
+import type { Community } from '@/models/Communities'
+
+const clubName = ref('')
+const description = ref('')
+const meetingTime = ref('')
+const contact = ref('')
+const street = ref('')
+const city = ref('')
+const state = ref('')
+const zip = ref('')
+
+function createCommunity() {
+  const newCommunity: Community = {
+    id: Date.now(),
+    name: clubName.value,
+    address: {
+      street: street.value,
+      city: city.value,
+      state: state.value,
+      zip: zip.value
+    },
+    meetingTime: meetingTime.value,
+    contact: contact.value,
+    description: description.value,
+    rating: 0,
+    reviews: [], 
+    events: [] 
+  }
+  console.log('Created Community:', newCommunity)
+}
 </script>
 
 <template>
@@ -18,42 +47,37 @@
         </header>
         <section class="modal-box-body">
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="Club Name" />
+            <input type="text" v-model="clubName" class="grow" placeholder="Club Name" />
           </label>
-          
           <textarea
-            class="textarea textarea-bordered flex items-centered gap-2"
+            v-model="description"
+            class="textarea textarea-bordered flex items-center gap-2"
             placeholder="Description"
           ></textarea>
-
-          <label
-            for="timeInput"
-            class="input input-bordered flex items-center gap-2 cursor-pointer"
-          >
-            <input id="timeInput" type="time" class="grow" value="time " />
+          <label for="timeInput" class="input input-bordered flex items-center gap-2 cursor-pointer">
+            <input id="timeInput" type="time" v-model="meetingTime" class="grow" />
           </label>
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="Contact Information" />
+            <input type="text" v-model="contact" class="grow" placeholder="Contact Information" />
           </label>
 
           <h4>Address</h4>
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="Street" />
+            <input type="text" v-model="street" class="grow" placeholder="Street" />
           </label>
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="City" />
+            <input type="text" v-model="city" class="grow" placeholder="City" />
           </label>
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="State" />
+            <input type="text" v-model="state" class="grow" placeholder="State" />
           </label>
           <label class="input input-bordered flex items-center gap-2">
-            <input type="string" class="no-spinner grow" placeholder="Zip Code" />
+            <input type="text" v-model="zip" class="no-spinner grow" placeholder="Zip Code" />
           </label>
         </section>
         <div class="modal-action">
-          <form method="dialog">
-            <button class="btn bg-green-500 text-white">Submit</button>
-          </form>
+          <!-- Trigger the createCommunity function on submit -->
+          <button @click="createCommunity" class="btn bg-green-500 text-white">Submit</button>
         </div>
       </div>
     </dialog>
