@@ -40,38 +40,78 @@ const events = ref([
       state: 'State',
       zip: '10112'
     }
+  },
+  {
+    id: 4,
+    title: 'Event 4',
+    description: 'Description for Event 4',
+    date: '04/01/2023',
+    time: '01:00PM',
+    address: {
+      street: '101 Pine St',
+      city: 'City',
+      state: 'State',
+      zip: '20234'
+    }
+  },
+  {
+    id: 5,
+    title: 'Event 5',
+    description: 'Description for Event 5',
+    date: '05/01/2023',
+    time: '02:00PM',
+    address: {
+      street: '202 Maple St',
+      city: 'City',
+      state: 'State',
+      zip: '30345'
+    }
+  },
+  {
+    id: 6,
+    title: 'Event 6',
+    description: 'Description for Event 6',
+    date: '06/01/2023',
+    time: '03:00PM',
+    address: {
+      street: '303 Birch St',
+      city: 'City',
+      state: 'State',
+      zip: '40456'
+    }
   }
 ]);
 </script>
 
 <template>
-  <meta charset="UTF-8">
-  <!-- /* From Uiverse.io by Yaya12085 */  -->
-  <div v-for="event in events" :key="event.id" class="card">
-    <div class="header">
-      <div>
-        <p class="title">{{ event.title }}</p>
-        <div>
-          <p class="date">{{ event.date }}</p>
-          <p class="time">{{ event.time }}</p>
+    <meta charset="UTF-8">
+    <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4">
+      <div v-for="event in events" :key="event.id" class="card">
+        <div class="header">
+          <div>
+            <p class="title">{{ event.title }}</p>
+            <div>
+              <p class="date">{{ event.date }}</p>
+              <p class="time">{{ event.time }}</p>
+            </div>
+          </div>
         </div>
+
+        <p class="description">
+          {{ event.description }}
+        </p>
+        <p class="address">
+          {{ event.address.street }}, {{ event.address.city }}, {{ event.address.state }}, {{ event.address.zip }}
+        </p>
       </div>
     </div>
-
-    <p class="description">
-      {{ event.description }}
-    </p>
-    <p class="address">
-      {{ event.address.street }}, {{ event.address.city }}, {{ event.address.state }}, {{ event.address.zip }}
-    </p>
-  </div>
 </template>
 
 <style scoped>
 /* From Uiverse.io by Yaya12085 */ 
 .card {
-  margin: 0.5rem;
   background-color: rgba(243, 244, 246, 1);
+  margin-top: 0.5rem;
   padding: 2rem;
   max-width: 400px;
   border-radius: 10px;
