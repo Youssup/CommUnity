@@ -8,7 +8,7 @@
 <!-- /* From Uiverse.io by Yaya12085 */  -->
     <div class="card">
           <div class="header">
-            <div class="rating"></div>
+            <div class="rating">5</div>
             <div>
               <div class="stars">
                 <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
@@ -17,10 +17,11 @@
             </div>
           </div>
 
-          <p class="message">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            voluptatem alias ut provident sapiente repellendus.
-          </p>
+          <ul class="message">
+            <p><b>Location: </b>place</p>
+            <p><b>Time: </b>time</p>
+            <p>Club description. Lorem ipsum!</p>
+          </ul>
     </div>
 
 </template>
@@ -50,6 +51,12 @@
   width: 4rem;
   border-radius: 9999px;
   background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .stars {
