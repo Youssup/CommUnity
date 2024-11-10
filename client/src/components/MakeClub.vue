@@ -42,7 +42,7 @@ async function setCommunity() {
     <dialog id="my_modal_1" class="modal">
       <div class="modal-box">
         <header class="modal-header">
-          <h1 class="text-base font-bold" id="modal-title">New Club</h1>
+          <h1 class="text-base font-bold" id="modal-title">New CommUnity</h1>
           <form method="dialog">
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           </form>
