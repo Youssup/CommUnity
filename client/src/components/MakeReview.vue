@@ -6,7 +6,7 @@ const isOpen = ref(false)
 <template>
   <div class="w-64 mx-auto">
     <button class="cool btn bg-violet-700 text-white" onclick="my_modal_2.showModal()">
-      Make Review
+      Make a review
     </button>
     <dialog id="my_modal_2" class="modal">
       <div class="modal-box">

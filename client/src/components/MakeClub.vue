@@ -6,40 +6,34 @@
 <template>
   <div class="">
     <button class="cool btn bg-violet-700 text-white" onclick="my_modal_1.showModal()">
-      Make an event
+      Make a Club
     </button>
     <dialog id="my_modal_1" class="modal">
       <div class="modal-box">
         <header class="modal-header">
-          <h1 class="text-base font-bold" id="modal-title">New Event</h1>
+          <h1 class="text-base font-bold" id="modal-title">New Club</h1>
           <form method="dialog">
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           </form>
         </header>
         <section class="modal-box-body">
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="Title" />
+            <input type="text" class="grow" placeholder="Club Name" />
           </label>
+          
           <textarea
             class="textarea textarea-bordered flex items-centered gap-2"
             placeholder="Description"
           ></textarea>
 
           <label
-            class="input input-bordered flex flex-row-reverse items-center gap-2 cursor-pointer"
-          >
-            <input
-              type="date"
-              class="grow bg-transparent focus:outline-none"
-              placeholder="MM/DD/YYYY"
-            />
-          </label>
-
-          <label
             for="timeInput"
             class="input input-bordered flex items-center gap-2 cursor-pointer"
           >
-            <input id="timeInput" type="time" class="grow" value="time" />
+            <input id="timeInput" type="time" class="grow" value="time " />
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <input type="text" class="grow" placeholder="Contact Information" />
           </label>
 
           <h4>Address</h4>
@@ -68,7 +62,7 @@
 
 <style scoped>
 button {
-  margin: 0.5rem;
+  margin: 0.2rem;
 }
 .modal-box-body {
   margin: 0.5rem;

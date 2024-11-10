@@ -16,7 +16,7 @@ export async function getAll() {
 //     }
 // }
 
-export interface Community{
+export interface Community {
     id: number
     name: string
     address: {
@@ -30,6 +30,6 @@ export interface Community{
     description: string
     rating: number
 
-  reviews: Review[]
-  events: Event[]
+    reviews: Review[]
+    events: Event[]
 }

@@ -28,11 +28,11 @@ const avgRating = computed(() => {
 
 <template>
   <meta charset="UTF-8" />
-  <!-- /* From Uiverse.io by Yaya12085 */ edited -->
+    <!-- /* From Uiverse.io by Yaya12085 */ edited -->
   <div class="card">
     <div class="header">
       <div class="rating">{{ avgRating }}</div>
-      <div>
+      <div class="club-info">
         <div class="stars">
           <p>
             <span v-for="star in Math.floor(Number(avgRating))" :key="star">&#11088;</span>
@@ -44,6 +44,7 @@ const avgRating = computed(() => {
         </RouterLink>
       </div>
     </div>
+
     <ul class="message">
       <p>
         <b>Location: </b>{{ comms.address.street }}, {{ comms.address.city }},
@@ -55,11 +56,12 @@ const avgRating = computed(() => {
   </div>
 </template>
 
+
 <style scoped>
 .card {
   margin: 0.5rem;
   background-color: rgba(243, 244, 246, 1);
-  padding: 2rem;
+  padding: 1rem;
   max-width: 320px;
   border-radius: 10px;
   box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
@@ -74,7 +76,8 @@ const avgRating = computed(() => {
 .header .rating {
   height: 4rem;
   width: 4rem;
-  border-radius: 9999px;
+  flex-shrink: 0;
+  border-radius: 50%;
   background-color: royalblue;
   display: flex;
   justify-content: center;
@@ -84,14 +87,18 @@ const avgRating = computed(() => {
   font-weight: 600;
 }
 
+.club-info {
+  flex-grow: 1;
+}
+
 .stars {
   display: flex;
-  justify-content: center;
   gap: 0.125rem;
   color: rgba(34, 197, 94, 1);
 }
 
 .name {
+  display: inline-block;
   margin-top: 0.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -106,4 +113,5 @@ const avgRating = computed(() => {
   margin-top: 1rem;
   color: rgba(107, 114, 128, 1);
 }
+
 </style>
