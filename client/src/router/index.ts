@@ -18,13 +18,13 @@ const router = createRouter({
     {
       path: '/events',
       name: 'events',
-      component: () => import('../pages/eventPage.vue')
+      component: () => import('../pages/eventPage.vue'),
     },
 
     {
       path: '/clubPro',
       name: 'clubPro',
-      component: () => import('../pages/clubProfile.vue')
+      component: () => import('../pages/clubProfile.vue'),
     },
 
     // {

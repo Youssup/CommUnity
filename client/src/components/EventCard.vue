@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const events = ref([
   {
@@ -12,8 +12,8 @@ const events = ref([
       street: '123 Main St',
       city: 'City',
       state: 'State',
-      zip: '12345'
-    }
+      zip: '12345',
+    },
   },
   {
     id: 2,
@@ -25,8 +25,8 @@ const events = ref([
       street: '456 Elm St',
       city: 'City',
       state: 'State',
-      zip: '67890'
-    }
+      zip: '67890',
+    },
   },
   {
     id: 3,
@@ -38,8 +38,8 @@ const events = ref([
       street: '789 Oak St',
       city: 'City',
       state: 'State',
-      zip: '10112'
-    }
+      zip: '10112',
+    },
   },
   {
     id: 4,
@@ -51,8 +51,8 @@ const events = ref([
       street: '101 Pine St',
       city: 'City',
       state: 'State',
-      zip: '20234'
-    }
+      zip: '20234',
+    },
   },
   {
     id: 5,
@@ -64,8 +64,8 @@ const events = ref([
       street: '202 Maple St',
       city: 'City',
       state: 'State',
-      zip: '30345'
-    }
+      zip: '30345',
+    },
   },
   {
     id: 6,
@@ -77,38 +77,39 @@ const events = ref([
       street: '303 Birch St',
       city: 'City',
       state: 'State',
-      zip: '40456'
-    }
-  }
-]);
+      zip: '40456',
+    },
+  },
+])
 </script>
 
 <template>
-    <meta charset="UTF-8">
-    <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4">
-      <div v-for="event in events" :key="event.id" class="card">
-        <div class="header">
+  <meta charset="UTF-8" />
+  <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4">
+    <div v-for="event in events" :key="event.id" class="card">
+      <div class="header">
+        <div>
+          <p class="title">{{ event.title }}</p>
           <div>
-            <p class="title">{{ event.title }}</p>
-            <div>
-              <p class="date">{{ event.date }}</p>
-              <p class="time">{{ event.time }}</p>
-            </div>
+            <p class="date">{{ event.date }}</p>
+            <p class="time">{{ event.time }}</p>
           </div>
         </div>
-
-        <p class="description">
-          {{ event.description }}
-        </p>
-        <p class="address">
-          {{ event.address.street }}, {{ event.address.city }}, {{ event.address.state }}, {{ event.address.zip }}
-        </p>
       </div>
+
+      <p class="description">
+        {{ event.description }}
+      </p>
+      <p class="address">
+        {{ event.address.street }}, {{ event.address.city }}, {{ event.address.state }},
+        {{ event.address.zip }}
+      </p>
     </div>
+  </div>
 </template>
 
 <style scoped>
-/* From Uiverse.io by Yaya12085 */ 
+/* From Uiverse.io by Yaya12085 */
 .card {
   background-color: rgba(243, 244, 246, 1);
   margin-top: 0.5rem;
@@ -141,5 +142,4 @@ const events = ref([
   margin-top: 1rem;
   color: rgba(107, 114, 128, 1);
 }
-
 </style>
