@@ -41,7 +41,7 @@
                   "description": "Join us for a meeting to discuss upcoming volunteer opportunities at the community center.",
                   "date": "2024-11-10",
                   "time": "10:00 AM",
-                  "adress": {
+                  "address": {
                     "street": "1234 Oak Avenue",
                     "city": "Greenwood",
                     "state": "CA",
@@ -54,7 +54,7 @@
                   "description": "Learn basic drawing and painting techniques in this fun, hands-on art workshop for all ages.",
                   "date": "2024-11-12",
                   "time": "2:00 PM",
-                  "adress": {
+                  "address": {
                     "street": "1234 Oak Avenue",
                     "city": "Greenwood",
                     "state": "CA",
@@ -67,7 +67,7 @@
                   "description": "Bring a dish and enjoy a meal with your neighbors! A great way to meet new people and share food.",
                   "date": "2024-11-15",
                   "time": "6:00 PM",
-                  "adress": {
+                  "address": {
                     "street": "1234 Oak Avenue",
                     "city": "Greenwood",
                     "state": "CA",
@@ -116,7 +116,7 @@
                   "description": "Join us for the opening night of our new art exhibition featuring local artists from the community.",
                   "date": "2024-11-05",
                   "time": "6:00 PM",
-                  "adress": {
+                  "address": {
                     "street": "789 Sunrise Blvd",
                     "city": "Sunrise",
                     "state": "FL",
@@ -129,7 +129,7 @@
                   "description": "A hands-on painting workshop where local artists will guide you through the process of creating your own masterpiece.",
                   "date": "2024-11-07",
                   "time": "2:00 PM",
-                  "adress": {
+                  "address": {
                     "street": "789 Sunrise Blvd",
                     "city": "Sunrise",
                     "state": "FL",
@@ -142,7 +142,7 @@
                   "description": "Join us for a free yoga session to relax and unwind. All skill levels are welcome.",
                   "date": "2024-11-09",
                   "time": "9:00 AM",
-                  "adress": {
+                  "address": {
                     "street": "789 Sunrise Blvd",
                     "city": "Sunrise",
                     "state": "FL",
@@ -191,7 +191,7 @@
                   "description": "Join us for a community cleanup event to keep Lakeside beautiful. Volunteers are welcome!",
                   "date": "2024-11-01",
                   "time": "9:00 AM",
-                  "adress": {
+                  "address": {
                     "street": "456 Lakeside Drive",
                     "city": "Lakeside",
                     "state": "TX",
@@ -204,7 +204,7 @@
                   "description": "Learn about sustainable practices and how to implement them in your daily life.",
                   "date": "2024-11-03",
                   "time": "1:00 PM",
-                  "adress": {
+                  "address": {
                     "street": "456 Lakeside Drive",
                     "city": "Lakeside",
                     "state": "TX",
@@ -217,7 +217,7 @@
                   "description": "Bring a blanket and enjoy a free movie under the stars at our neighborhood park.",
                   "date": "2024-11-08",
                   "time": "7:30 PM",
-                  "adress": {
+                  "address": {
                     "street": "456 Lakeside Drive",
                     "city": "Lakeside",
                     "state": "TX",
