@@ -1,11 +1,13 @@
 <script setup lang="ts">
-defineProps<{
-  rating: number;
-  clubName: string;
-  location: string;
-  time: string;
-  description: string;
-}>();
+import type { Community } from '@/models/Communities';
+import { setComms } from '@/models/commsData';
+
+const props = defineProps<{
+comms: Community
+}>()
+
+const {comms} =props
+
 </script>
 
 <template>
@@ -13,21 +15,23 @@ defineProps<{
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
   <div class="card">
     <div class="header">
-      <div class="rating">{{ rating }}</div>
+      <div class="rating">{{ comms.rating }}</div>
       <div>
         <div class="stars">
           <p>
-            <span v-for="star in Math.floor(rating)" :key="star">&#11088;</span>
-            <span v-if="rating % 1 !== 0">&#9734;</span>
+            <span v-for="star in Math.floor(comms.rating)" :key="star">&#11088;</span>
+            <span v-if="comms.rating % 1 !== 0">&#9734;</span>
           </p>
         </div>
-        <p class="name">{{ clubName }}</p>
+        <RouterLink to="/clubPro">
+        <a class="name" @click="setComms(comms)">{{ comms.name }}</a>
+        </RouterLink>
       </div>
     </div>
     <ul class="message">
-      <p><b>Location: </b>{{ location }}</p>
-      <p><b>Time: </b>{{ time }}</p>
-      <p>{{ description }}</p>
+      <p><b>Location: </b>{{ comms.address }}</p>
+      <p><b>Time: </b>{{ comms.meetingTime }}</p>
+      <p>{{ comms.description }}</p>
     </ul>
   </div>
 </template>

@@ -88,25 +88,25 @@
               "meetingTime": "Every Thursday at 5:00 PM",
               "contact": "contact@sunrisehub.org",
               "description": "Sunrise Community Hub is a non-profit organization dedicated to promoting local artists, providing educational workshops, and hosting neighborhood events.",
-              "rating": 4.8,
+              "rating": 3,
               "reviews": [
                 {
                   "id": 1,
                   "comment": "Amazing place! The art workshops are very informative and the people are so friendly.",
                   "date": "2024-09-30",
-                  "rating": 5
+                  "rating": 2
                 },
                 {
                   "id": 2,
                   "comment": "I love the local art exhibitions. A great way to support emerging artists.",
                   "date": "2024-08-12",
-                  "rating": 5
+                  "rating": 3
                 },
                 {
                   "id": 3,
                   "comment": "Great workshops, but could use more variety in topics.",
                   "date": "2024-07-25",
-                  "rating": 4
+                  "rating": 3
                 }
               ],
               "events": [
