@@ -2,13 +2,19 @@ import data from '../data/comms.json'
 import type { Event } from "./Events";
 import type { Review } from "./Reviews";
 import type { DataListEnvelope } from "./dataEnvelope";
+import { rest } from './fetch'
 
-export function getAll(): DataListEnvelope<Community> {
-    return{
-        data: data.communities.flat(),
-        total: data.total
-    }
+export async function getAll() {
+    console.log(rest('community/'))
+    return rest('community/')
 }
+
+// export function getAll(): DataListEnvelope<Community> {
+//     return{
+//         data: data.communities.flat(),
+//         total: data.total
+//     }
+// }
 
 export interface Community{
     id: number
