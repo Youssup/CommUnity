@@ -16,7 +16,7 @@ watchEffect(async () => {
 const filteredComms = computed(() => {
   const query = searchQuery.value.toLowerCase()
   return communities.value.filter((comms) =>
-    comms.name.toLowerCase().includes(query)
+    comms.address.zip.includes(query)
   )
 })
 
