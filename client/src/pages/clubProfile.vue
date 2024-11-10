@@ -1,10 +1,11 @@
 <script setup lang="ts">
-
+import ClubProf from '@/components/ClubProf.vue';
 </script>
 
 <template>
-    <div>
-        <h1>Club Profile</h1>
+    <div class="min-h-screen">
+        <ClubProf />
+
     </div>
 </template>
 

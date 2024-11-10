@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-const isOpen = ref(false)
+// import { ref } from 'vue';
+// const isOpen = ref(false)
 </script>
 
 <template>
-    <div class="w-64 mx-auto">
-        <button class="btn" onclick="my_modal_1.showModal()">Make Event</button>
+    <div class="">
+        <button class="cool btn" onclick="my_modal_1.showModal()">Make Event</button>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
     <header class="modal-header">
@@ -71,5 +71,14 @@ button{
 .no-spinner::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.cool{
+    width: 200px;
+}
+.shelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 </style>
