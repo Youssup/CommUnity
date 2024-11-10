@@ -28,6 +28,7 @@ import { RouterLink } from 'vue-router';
         <RouterLink to="/" class="navbar-item"><li><a>Homepage</a></li></RouterLink>
         <RouterLink to="/clubs" class="navbar-items"><li><a>Clubs</a></li></RouterLink>
         <RouterLink to="/events" class="navbar-items"><li><a>Events</a></li></RouterLink>
+        <RouterLink to="/clubPro" class="navbar-items"><li><a>Profile</a></li></RouterLink>
       </ul>
     </div>
   </div>
