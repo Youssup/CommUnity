@@ -7,7 +7,7 @@ const currentComm=refComms()
 
 <template>
   <meta charset="UTF-8" >
-  <div v-for="comm in currentComm" :key="comm.comms.id">
+  <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4" v-for="comm in currentComm" :key="comm.comms.id">
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
   <div class="review-card shadow-lg" v-for="review in comm.comms.reviews" :key="review.id">
     <div class="header" >
