@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ClubCard from"../components/ClubCard.vue"
-import review from "../components/MakeReview.vue"
+//import review from "../components/MakeReview.vue"
 //import userReview from "../components/ReviewCard.vue"
 
 //import { refComms} from "@/models/commsData";
@@ -17,13 +17,14 @@ comms.value = getAll().data
 <template>
     
     <div class="container min-h-screen">
-        <review />
+      <div class="grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4">
         <ClubCard
         v-for="comm in comms"
         :key="comm.id"
         :comms="comm"
       
     />
+    </div>
     </div>
 
 </template>

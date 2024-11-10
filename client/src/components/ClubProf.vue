@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import MakeReview from './MakeReview.vue';
-import { refComms } from '@/models/commsData';
+import { calculateAverageRating, refComms } from '@/models/commsData';
 import MakeEvent from './MakeEvent.vue';
+import { computed } from 'vue';
 const currentComm=refComms()
+
+const avgRating = computed(() => calculateAverageRating())
+
 </script>
 
 <template>
@@ -17,8 +21,8 @@ const currentComm=refComms()
         <h2 class="text-3xl font-semibold text-gray-800">{{ profile.comms.name }}</h2>
         <div class="text-l">
           <p>
-            <span v-for="star in Math.floor(profile.comms.rating)" :key="star">&#11088;</span>
-            <span v-if="profile.comms.rating % 1 !== 0">&#9734;</span>
+            <span v-for="star in Math.floor(avgRating)" :key="star">&#11088;</span>
+            <span v-if="avgRating % 1 !== 0">&#9734;</span>
           </p>
         </div>
   

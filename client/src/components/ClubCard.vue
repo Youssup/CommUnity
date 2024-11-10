@@ -1,13 +1,25 @@
 <script setup lang="ts">
 import type { Community } from '@/models/Communities';
 import { setComms } from '@/models/commsData';
+import { computed } from 'vue';
 
 const props = defineProps<{
-comms: Community
-}>()
+  comms: Community
+}>();
 
-const {comms} =props
+const { comms } = props;
 
+const avgRating = computed(() => {
+  let totalRating = 0;
+  let reviewCount = 0;
+
+  comms.reviews.forEach(review => {
+    totalRating += review.rating;
+    reviewCount++;
+  });
+
+  return reviewCount > 0 ? (totalRating / reviewCount).toFixed(1) : 0;
+});
 </script>
 
 <template>
@@ -15,16 +27,16 @@ const {comms} =props
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
   <div class="card">
     <div class="header">
-      <div class="rating">{{ comms.rating }}</div>
+      <div class="rating">{{ avgRating }}</div>
       <div>
         <div class="stars">
           <p>
-            <span v-for="star in Math.floor(comms.rating)" :key="star">&#11088;</span>
-            <span v-if="comms.rating % 1 !== 0">&#9734;</span>
+            <span v-for="star in Math.floor(Number(avgRating))" :key="star">&#11088;</span>
+            <span v-if="Number(avgRating) % 1 !== 0">&#9734;</span>
           </p>
         </div>
         <RouterLink to="/clubPro">
-        <a class="name" @click="setComms(comms)">{{ comms.name }}</a>
+          <a class="name" @click="setComms(comms)">{{ comms.name }}</a>
         </RouterLink>
       </div>
     </div>

@@ -94,7 +94,7 @@
                   "id": 1,
                   "comment": "Amazing place! The art workshops are very informative and the people are so friendly.",
                   "date": "2024-09-30",
-                  "rating": 2
+                  "rating": 4
                 },
                 {
                   "id": 2,
@@ -163,7 +163,7 @@
               "meetingTime": "Every Sunday at 4:00 PM",
               "contact": "info@lakesidegroup.org",
               "description": "Lakeside Neighborhood Group brings residents together to promote community improvement, environmental sustainability, and local events.",
-              "rating": 4.2,
+              "rating": 4,
               "reviews": [
                 {
                   "id": 1,
@@ -175,7 +175,7 @@
                   "id": 2,
                   "comment": "Love the sense of belonging here. So many different activities for everyone.",
                   "date": "2024-09-18",
-                  "rating": 5
+                  "rating": 2
                 },
                 {
                   "id": 3,
