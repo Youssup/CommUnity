@@ -26,7 +26,7 @@ import ClubScore from '@/assets/ClubScore.png'
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          class="menu menu-sm dropdown-content bg-purple-600 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
         >
           <RouterLink to="/" class="navbar-item" @click="exitComms()"
             ><li><a>Homepage</a></li></RouterLink
@@ -43,7 +43,7 @@ import ClubScore from '@/assets/ClubScore.png'
     <div class="navbar-center">
       <img class="w-24" :src="ClubScore" alt="ClubScore" />
       <RouterLink to="/" class="navbar-item" @click="exitComms()">
-      <a class="stuff btn btn-ghost text-yellow-400 text-xl font-bold">Club Score</a>
+      <a class="stuff btn btn-ghost text-yellow-400 text-xl text-white font-bold">Club Score</a>
     </RouterLink>
     </div>
     <div class="navbar-end">

@@ -35,6 +35,6 @@ const communitySchema = new mongoose.Schema({
   events: { type: [eventSchema], default: [] }
 });
 
-const Community = mongoose.model('Community', communitySchema);
+const Community = mongoose.model('Community', communitySchema, 'communities');
 
 module.exports = Community;

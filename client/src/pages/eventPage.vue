@@ -4,12 +4,11 @@ import EventCard from '@/components/EventCard.vue'
 </script>
 
 <template>
-  <div class="min-h-screen">
-    <MakeEvent />
-    <div class="self">
-      <EventCard />
+    <div class="min-h-screen">
+        <div class="shelf">
+            <EventCard />
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

@@ -1,12 +1,12 @@
-const Community = require('../models/communityModel');
+const Community = require('../models/communityModel.js');
+const mongoose = require('mongoose');
 
 // Get all communities
 exports.getAllCommunities = async (req, res) => {
   try {
-    const communities = await Community.find();
+    const communities = await Community.find({});
     res.status(200).json({
-      communities,
-      total: communities.length
+      communities
     });
   } catch (err) {
     res.status(500).json({ message: "Error fetching communities", error: err });
@@ -22,15 +22,17 @@ exports.getCommunityById = async (req, res) => {
     }
     res.status(200).json(community);
   } catch (err) {
+    console.log({err})
     res.status(500).json({ message: "Error fetching community", error: err });
   }
 };
 
 // Create a new community
 exports.createCommunity = async (req, res) => {
-  const { name, address, meetingTime, contact, description, rating, reviews, events } = req.body;
-  
+  const { id,name, address, meetingTime, contact, description, rating, reviews, events } = req.body;
+
   const newCommunity = new Community({
+    id,
     name,
     address,
     meetingTime,
