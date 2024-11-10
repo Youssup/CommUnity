@@ -20,6 +20,8 @@ const filteredComms = computed(() => {
   )
 })
 
+const isOpen = ref(false)
+
 </script>
 
 <template>
@@ -39,17 +41,23 @@ const filteredComms = computed(() => {
             Find the best community for you to join and share your thoughts and ideas with others.
           </p>
         </div>
-        <div class="flex w-11/12 md:w-8/12 xl:w-6/12">
-          <div class="flex rounded-md w-full">
+        <div class=" flex w-11/12 md:w-8/12 xl:w-6/12">
+          <div class="dropdown dropdown-hover flex rounded-md w-full">
             <input
+            v-model="searchQuery"
               type="text"
               name="q"
               class="w-full p-3 rounded-md rounded-r-none border border-2 border-gray-300 placeholder-current dark:bg-gray-500 dark:text-gray-300 dark:border-none"
-              placeholder="location"
+              placeholder=""
             />
             <button
               class="inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md"
             >
+            <ul class="dropdown-content menu mt-4">
+      <li v-for="comms in filteredComms" :key="comms.id" class="py-1">
+        {{ comms.name }} - {{ comms.address.zip }}
+      </li>
+    </ul>
               <span>search</span>
               <svg
                 class="text-gray-200 h-5 w-5 p-0 fill-current"
@@ -70,22 +78,7 @@ const filteredComms = computed(() => {
           </div>
         </div>
         
-        <div class="p-4">
-    <!-- Search Bar -->
-    <input
-      v-model="searchQuery"
-      type="text"
-      placeholder="Search..."
-      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-
-    <!-- Filtered Items -->
-    <ul class="mt-4">
-      <li v-for="comms in filteredComms" :key="comms.id" class="py-1">
-        {{ comms.name }}
-      </li>
-    </ul>
-  </div>
+       
       </div>
     </div>
   </div>
