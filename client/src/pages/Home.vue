@@ -42,7 +42,8 @@ const isOpen = ref(false)
           </p>
         </div>
         <div class=" flex w-11/12 md:w-8/12 xl:w-6/12">
-          <div class="dropdown dropdown-hover flex rounded-md w-full">
+          <div class="flex rounded-md w-full">
+            <div></div>
             <input
             v-model="searchQuery"
               type="text"
@@ -50,14 +51,15 @@ const isOpen = ref(false)
               class="w-full p-3 rounded-md rounded-r-none border border-2 border-gray-300 placeholder-current dark:bg-gray-500 dark:text-gray-300 dark:border-none"
               placeholder=""
             />
-            <button
-              class="inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md"
-            >
             <ul class="dropdown-content menu mt-4">
-      <li v-for="comms in filteredComms" :key="comms.id" class="py-1">
-        {{ comms.name }} - {{ comms.address.zip }}
-      </li>
-    </ul>
+         <li v-for="comms in filteredComms" :key="comms.id" class="py-1">
+             {{ comms.name }}
+            </li>
+           </ul>
+            <button
+              class="searching inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md"
+            >
+
               <span>search</span>
               <svg
                 class="text-gray-200 h-5 w-5 p-0 fill-current"
@@ -84,4 +86,8 @@ const isOpen = ref(false)
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.searching{
+  margin-left: -2rem;
+}
+</style>
