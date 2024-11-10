@@ -1,33 +1,33 @@
 <script setup lang="ts">
-defineProps<{
-  rating: number;
-  userName: string;
-  reviewDate: string;
-  comment: string;
-}>();
+import { refComms } from '@/models/commsData';
+const currentComm=refComms()
+
+
 </script>
 
 <template>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" >
+  <div v-for="comm in currentComm" :key="comm.comms.id">
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
-  <div class="review-card shadow-lg">
-    <div class="header">
-      <div class="rating">{{ rating }}</div>
+  <div class="review-card shadow-lg" v-for="review in comm.comms.reviews" :key="review.id">
+    <div class="header" >
+      <div class="rating">{{ review.rating }}</div>
       <div>
         <div class="stars">
           <p>
-            <span v-for="star in Math.floor(rating)" :key="star">&#11088;</span>
-            <span v-if="rating % 1 !== 0">&#9734;</span>
+            <span v-for="star in Math.floor(review.rating)" :key="star">&#11088;</span>
+            <span v-if="review.rating % 1 !== 0">&#9734;</span>
           </p>
         </div>
-        <p class="user-name">{{ userName }}</p>
-        <p class="review-date">{{ reviewDate }}</p>
+        <p class="user-name">Anonymous</p>
+        <p class="review-date">{{ review.date }}</p>
       </div>
     </div>
     <div class="comment">
-      <p>"{{ comment }}"</p>
+      <p>"{{ review.comment }}"</p>
     </div>
   </div>
+</div>
 </template>
 
 <style scoped>
