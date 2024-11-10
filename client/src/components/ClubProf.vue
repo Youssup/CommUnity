@@ -49,14 +49,8 @@ const avgRating = computed(() => calculateAverageRating())
   
         <!-- Profile Actions -->
         <div class="mt-8 flex justify-center space-x-6">
-          <div>
-            <review />
-    
-          </div>
-          <div>
-            <MakeEvent />
-          </div>
-  
+          <MakeEvent />  
+          <review />
           <!-- <button class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100">Message</button> -->
         </div>
       </div>
