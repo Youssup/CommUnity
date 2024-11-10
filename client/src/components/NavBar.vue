@@ -47,13 +47,13 @@ import ClubScore from '@/assets/ClubScore.png'
     </RouterLink>
     </div>
     <div class="navbar-end">
-      <div class="form-control">
+      <!-- <div class="form-control">
         <input
           type="text"
           placeholder="Search"
           class="input input-bordered w-24 md:w-auto bg-purple-600"
         />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

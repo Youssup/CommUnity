@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Event } from '../models/Event'
+import type { Event } from '../models/Events'
 import { defineProps } from 'vue'
 
 const props = defineProps<{
@@ -13,7 +13,7 @@ const props = defineProps<{
     <div v-for="event in props.events" :key="event.id" class="card">
       <div class="header">
         <div>
-          <p class="title">{{ event.title }}</p>
+          <p class="title font-bold">{{ event.title }}</p>
           <div>
             <p class="date">{{ event.date }}</p>
             <p class="time">{{ event.time }}</p>
@@ -36,7 +36,7 @@ const props = defineProps<{
 /* From Uiverse.io by Yaya12085 */
 .card {
   background-color: rgba(243, 244, 246, 1);
-  margin-top: 0.5rem;
+  margin: 0.3rem;
   padding: 2rem;
   max-width: 400px;
   border-radius: 10px;
@@ -55,6 +55,7 @@ const props = defineProps<{
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 600;
+  font-style: bold;
   --tw-text-opacity: 1;
   color: rgba(55, 65, 81, 1);
 }

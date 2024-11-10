@@ -13,32 +13,20 @@ watchEffect(async () => {
 
 <template>
   <div class="min-h-screen">
-    <div class="shelf">
-      <div v-for="community in communities" :key="community.id" class="community-events">
-        <h2 class="community-title">{{ community.name }} Events</h2>
-        <EventCard :events="community.events" />
-      </div>
-    </div>
+    <EventCard :events="communities.flatMap(community => community.events)" />
   </div>
 </template>
 
 <style scoped>
-.shelf {
+/* .shelf {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-}
+} */
 
 .community-events {
   width: 100%;
   max-width: 1200px;
-}
-
-.community-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: black;
 }
 </style>

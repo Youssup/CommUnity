@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import type { Community } from '@/models/Communities'
+import  { type Community} from '@/models/Communities'
 import { setComms } from '@/models/commsData'
-import { computed } from 'vue'
+import { computed} from 'vue'
+
+
 
 const props = defineProps<{
   comms: Community
@@ -20,6 +22,8 @@ const avgRating = computed(() => {
 
   return reviewCount > 0 ? (totalRating / reviewCount).toFixed(1) : 0
 })
+
+
 </script>
 
 <template>

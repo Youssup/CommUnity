@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { computed, ref, watchEffect } from 'vue'
+import { setComms } from '@/models/commsData';
 import { getAll, type Community } from "@/models/Communities";
 
 // Define the search query ref
@@ -16,10 +17,15 @@ watchEffect(async () => {
 const filteredComms = computed(() => {
   const query = searchQuery.value.toLowerCase()
   return communities.value.filter((comms) =>
-    comms.address.zip.includes(query)
+  comms.name.toLowerCase().includes(query) ||comms.address.zip.includes(query)
   )
 })
 
+const props = defineProps<{
+  comms: Community
+}>()
+
+const { comms } = props
 const isOpen = ref(false)
 
 </script>
@@ -41,15 +47,15 @@ const isOpen = ref(false)
             Find the best community for you to join and share your thoughts and ideas with others.
           </p>
         </div>
-        <div class=" flex w-11/12 md:w-8/12 xl:w-6/12">
+        <div class="dropdown dropdown-hover flex w-11/12 md:w-8/12 xl:w-6/12">
           <div class="flex rounded-md w-full">
             <div></div>
             <input
             v-model="searchQuery"
               type="text"
               name="q"
-              class="w-full p-3 rounded-md rounded-r-none border border-2 border-gray-300 placeholder-current dark:bg-gray-500 dark:text-gray-300 dark:border-none"
-              placeholder=""
+              class="w-full p-3 rounded-md rounded-r-none border border-2 border-indigo-900 placeholder-current dark:bg-purple-500 text-white dark:border-none"
+              placeholder="club name..."
             />
             <button
               class="searching inline-flex items-center gap-2 bg-violet-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md"
@@ -73,9 +79,9 @@ const isOpen = ref(false)
                 />
               </svg>
             </button>
-            <ul class="dropdown-content menu mt-4">
+            <ul class="dropdown-content menu mt-4 rounded bg-purple-600 text-white">
          <li v-for="comms in filteredComms" :key="comms.id" class="py-1">
-             {{ comms.name }}
+             <RouterLink to="/clubPro" @click="setComms(comms)"> {{ comms.name }} </RouterLink>
             </li>
            </ul>
           </div>
@@ -88,5 +94,8 @@ const isOpen = ref(false)
 </template>
 
 <style scoped>
-
+.dropdown-content {
+  margin-top: 3.5rem;
+  padding: 0.5rem;
+}
 </style>
