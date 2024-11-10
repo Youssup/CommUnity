@@ -2,7 +2,6 @@
 import { ref, watchEffect} from "vue";
 import ClubCard from "../components/ClubCard.vue"
 import { getAll, type Community } from "@/models/Communities";
-console.log("Hello")
 
 const communities = ref<Community[]>([])
 watchEffect(async () => {
