@@ -1,25 +1,28 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import ClubCard from"../components/ClubCard.vue"
 import review from "../components/MakeReview.vue"
 import userReview from "../components/ReviewCard.vue"
+
+import { refComms} from "@/models/commsData";
+import { getAll, type Community } from "@/models/Communities";
+
+const comms = ref<Community[]>([])
+comms.value = getAll().data
+
+const currentComm= refComms()
+
 </script>
 
 <template>
     
     <div class="container min-h-screen">
         <review />
-        <ClubCard 
-      :rating=3.2
-      clubName="Eleet Coders" 
-      location="Science Hall 181" 
-      time="Thursdays, 6:30 PM" 
-      description="Join us to practice coding challenges and develop new skills in a supportive environment!" 
-    />
-        <userReview
-      :rating="4.5"
-      userName="John Doe" 
-      reviewDate="October 25, 2024" 
-      comment="Great club experience! Learned so much and met amazing people!" 
+        <ClubCard
+        v-for="comm in comms"
+        :key="comm.id"
+        :comms="comm"
+      
     />
     </div>
 
