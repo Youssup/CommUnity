@@ -24,7 +24,7 @@ import { exitComms } from '@/models/commsData';
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        class="menu menu-sm dropdown-content bg-purple-600 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white">
         <RouterLink to="/" class="navbar-item" @click="exitComms()"><li><a>Homepage</a></li></RouterLink>
         <RouterLink to="/clubs" class="navbar-items" @click="exitComms()"><li ><a>Clubs</a></li></RouterLink>
         <RouterLink to="/events" class="navbar-items" @click="exitComms()"><li><a>Events</a></li></RouterLink>
@@ -32,7 +32,7 @@ import { exitComms } from '@/models/commsData';
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost text-xl font-bold">Club Score</a>
+    <a class="btn btn-ghost text-xl text-white font-bold">Club Score</a>
   </div>
   <div class="navbar-end">
     <div class="form-control">
