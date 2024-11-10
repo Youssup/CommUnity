@@ -28,7 +28,6 @@ import { exitComms } from '@/models/commsData';
         <RouterLink to="/" class="navbar-item" @click="exitComms()"><li><a>Homepage</a></li></RouterLink>
         <RouterLink to="/clubs" class="navbar-items" @click="exitComms()"><li ><a>Clubs</a></li></RouterLink>
         <RouterLink to="/events" class="navbar-items" @click="exitComms()"><li><a>Events</a></li></RouterLink>
-        <RouterLink to="/clubPro" class="navbar-items"><li><a>Profile</a></li></RouterLink>
       </ul>
     </div>
   </div>

@@ -29,7 +29,7 @@ const {comms} =props
       </div>
     </div>
     <ul class="message">
-      <p><b>Location: </b>{{ comms.address }}</p>
+      <p><b>Location: </b>{{ comms.address.street }}, {{ comms.address.city }}, {{ comms.address.state }}, {{ comms.address.zip }}</p>
       <p><b>Time: </b>{{ comms.meetingTime }}</p>
       <p>{{ comms.description }}</p>
     </ul>

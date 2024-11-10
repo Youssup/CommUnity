@@ -24,7 +24,7 @@ const currentComm=refComms()
         <!-- Profile Stats -->
         <div class="flex justify-around mt-6 text-gray-700">
           <div>
-            <p class="text-xl font-semibold">{{ profile.comms.address }}</p>
+            <p class="text-xl font-semibold">{{ profile.comms.address.street }}, {{ profile.comms.address.city }}, {{ profile.comms.address.state }}, {{ profile.comms.address.zip }}</p>
             <p class="text-base text-gray-500">Location</p>
           </div>
           <div>

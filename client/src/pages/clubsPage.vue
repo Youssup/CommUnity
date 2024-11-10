@@ -2,15 +2,15 @@
 import { ref } from "vue";
 import ClubCard from"../components/ClubCard.vue"
 import review from "../components/MakeReview.vue"
-import userReview from "../components/ReviewCard.vue"
+//import userReview from "../components/ReviewCard.vue"
 
-import { refComms} from "@/models/commsData";
+//import { refComms} from "@/models/commsData";
 import { getAll, type Community } from "@/models/Communities";
 
 const comms = ref<Community[]>([])
 comms.value = getAll().data
 
-const currentComm= refComms()
+//const currentComm= refComms()
 
 </script>
 
