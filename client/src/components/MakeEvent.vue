@@ -5,7 +5,7 @@
 
 <template>
     <div class="">
-        <button class="cool btn" onclick="my_modal_1.showModal()">Make Event</button>
+        <button class="cool btn bg-violet-700 text-white" onclick="my_modal_1.showModal()">Make Event</button>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
     <header class="modal-header">

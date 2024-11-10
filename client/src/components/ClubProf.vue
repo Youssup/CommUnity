@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MakeReview from './MakeReview.vue';
 import { refComms } from '@/models/commsData';
+import MakeEvent from './MakeEvent.vue';
 const currentComm=refComms()
 </script>
 
@@ -44,7 +45,7 @@ const currentComm=refComms()
   
         <!-- Profile Actions -->
         <div class="mt-8 flex justify-center space-x-6">
-          <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Join</button>
+          <MakeEvent />
           <MakeReview />
           <!-- <button class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100">Message</button> -->
         </div>
