@@ -6,7 +6,7 @@ const isOpen = ref(false)
 
 <template>
     <div class="w-64 mx-auto">
-        <button class="btn" onclick="my_modal_1.showModal()">Make Review</button>
+        <button class="cool btn bg-violet-700 text-white" onclick="my_modal_1.showModal()">Make Review</button>
         <dialog id="my_modal_1" class="modal">
             <div class="modal-box">
                 <header class="modal-header">
@@ -85,6 +85,10 @@ button{
 .rating label:hover ~ label {
   color: #ffce39;
   transition: color 0.3s;
+}
+
+.cool{
+    width: 200px;
 }
 
 </style>
