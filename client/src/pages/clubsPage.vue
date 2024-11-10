@@ -9,7 +9,7 @@ import userReview from "../components/ReviewCard.vue"
     <div class="container min-h-screen">
         <review />
         <ClubCard 
-      :rating=5
+      :rating=3.2
       clubName="Eleet Coders" 
       location="Science Hall 181" 
       time="Thursdays, 6:30 PM" 

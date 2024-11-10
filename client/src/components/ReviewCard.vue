@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <meta charset="UTF-8">
   <!-- /* From Uiverse.io by Yaya12085 */ edited -->
-  <div class="review-card">
+  <div class="review-card shadow-lg">
     <div class="header">
       <div class="rating">{{ rating }}</div>
       <div>
