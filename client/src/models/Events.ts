@@ -4,7 +4,7 @@ export interface Event{
     description: string
     date: string
     time: string
-    adress: {
+    address: {
         street: string
         city: string
         state: string
