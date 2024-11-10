@@ -5,8 +5,7 @@ import EventCard from '@/components/EventCard.vue';
 
 <template>
     <div class="min-h-screen">
-        <MakeEvent/>
-        <div class="self">
+        <div class="shelf">
             <EventCard />
         </div>
     </div>
