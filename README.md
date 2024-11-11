@@ -25,3 +25,4 @@ We also had one member who led the front-end design, utilizing Tailwind CSS and 
 Each of us learned a great deal individually, but it was the collaboration that made the project come together. We all had to adapt quickly, communicate effectively, and share knowledge to build a functional, modern platform.
 ## What's next for CommUnity
 We hope to integrate with Schools and local communities. This could help increase the size of our database which could also lead to integration of Machine learning and AI. We would train a model to recognize which club would best align with the user's passions and goals. 
+[Presentation](CommUnity-Presentation.pdf)
