@@ -1,4 +1,5 @@
 # CommUnity
+[Presentation](CommUnity-Presentation.pdf)
 ## Inspiration
 As college students, we experienced difficulty when deciding where to go to college. One of the biggest factors for us was our life outside of academics. There was no clear way to discover what the clubs were like, and we lacked personal experiences to guide our decisions. This made it challenging to choose a college that aligned with our passions and interests beyond the classroom.
 ## What it does
@@ -25,4 +26,7 @@ We also had one member who led the front-end design, utilizing Tailwind CSS and 
 Each of us learned a great deal individually, but it was the collaboration that made the project come together. We all had to adapt quickly, communicate effectively, and share knowledge to build a functional, modern platform.
 ## What's next for CommUnity
 We hope to integrate with Schools and local communities. This could help increase the size of our database which could also lead to integration of Machine learning and AI. We would train a model to recognize which club would best align with the user's passions and goals. 
-[Presentation](CommUnity-Presentation.pdf)
+## Demo
+Experience the Fitness Tracker application through the <a href="https://hackrpi-1.onrender.com/" target="_blank">live demo</a>!
+
+Please note: The demo may take a few minutes to fully load.
